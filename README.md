@@ -4,7 +4,7 @@ Retrieval‑Augmented Generation (RAG) service engineered like a real product: h
 
 **Live Demo:** https://rag-pipeline-eta.vercel.app
 **API Docs (Swagger):** https://rag-pipeline-api-hksb.onrender.com/docs
-**Repo:** https://github.com/cbratkovics/rag-pipeline
+**Repo:** https://github.com/vedant7151/Production-Ready-Hybrid-RAG-System-with-Retrieval-Evaluation.git
 
 ---
 
