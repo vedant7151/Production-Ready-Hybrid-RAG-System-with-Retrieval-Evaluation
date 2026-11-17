@@ -1,0 +1,177 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+/lib/
+/lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+ENV/
+env/
+.venv/
+.venv*/
+.virtualenv/
+**/venv/
+**/.venv/
+
+# Python Cache & Tools
+__pycache__/
+*.pyc
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+dmypy.json
+.pytest_cache/
+.coverage
+.hypothesis/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+*.code-workspace
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Testing
+htmlcov/
+.tox/
+*.cover
+.cache
+
+# Data and Models
+.chroma/
+.claude/
+chroma/
+*.db
+*.sqlite
+*.sqlite3
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.parquet
+
+# Logs
+*.log
+logs/
+*.out
+*.err
+
+# Environment
+.env
+.env.*
+!.env.example
+.envrc
+
+# Pre-commit (ignore duplicate configs)
+.pre-commit-config*.yaml
+!.pre-commit-config.yaml
+
+# MLflow
+mlruns/
+mlflow_artifacts/
+
+# Results (keep structure but not all files)
+results/ragas/*/
+!results/ragas/.gitkeep
+benchmarks/locust/*/
+!benchmarks/locust/.gitkeep
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Monitoring
+prometheus_data/
+grafana_data/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+*.old
+*~
+
+# Generated documentation
+docs/_build/
+site/
+_build/
+
+# Package managers
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+.pnpm-store/
+
+# Secrets & Keys
+*.key
+*.pem
+*.crt
+*.p12
+secrets/
+.secret
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# UV lock file (Python package manager)
+# uv.lock should be committed to version control
+
+# Output from tools
+/tmp/prometheus_multiproc/
+/Claude.md
+CLAUDE.md
+
+# Local setup files
+LOCAL_SETUP.md
+
+# Python version files
+.python-version
+
+# Pytest
+.pytest_cache/

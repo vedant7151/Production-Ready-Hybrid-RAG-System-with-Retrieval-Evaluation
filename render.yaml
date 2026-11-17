@@ -1,0 +1,41 @@
+services:
+  - type: web
+    name: rag-pipeline-api
+    runtime: python
+    region: oregon
+    buildCommand: |
+      pip install --upgrade pip
+      pip install uv==0.5.1
+      uv sync --frozen --no-dev
+    startCommand: uvicorn src.api.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /healthz
+    disk:
+      name: chroma-store
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.0"
+      - key: FRONTEND_CORS_ORIGINS
+        value: https://rag-pipeline-eta.vercel.app,https://*.vercel.app,http://localhost:3000
+      - key: FRONTEND_CORS_ORIGIN_REGEX
+        value: https://.*\.vercel\.app
+      - key: PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION
+        value: python
+      - key: OPENAI_MODEL
+        value: gpt-3.5-turbo
+      - key: CHROMA_PERSIST_DIR
+        value: /var/data/chroma
+      - key: EMBEDDING_MODEL
+        value: all-MiniLM-L6-v2
+      - key: HYBRID_WEIGHT_BM25
+        value: "0.5"
+      - key: HYBRID_WEIGHT_VECTOR
+        value: "0.5"
+      - key: OPENAI_API_KEY
+        sync: false  # Must be set manually in Render dashboard
+  - type: redis
+    name: rag-pipeline-redis
+    ipAllowList: []
+    plan: starter
+    maxmemoryPolicy: allkeys-lru
